@@ -1,55 +1,67 @@
-🌐 AI-Powered RFP Management System
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>AI-Powered RFP Management System</title>
+</head>
+<body style="font-family: Arial, sans-serif; line-height: 1.6; background: #f9fafb; color: #111; padding: 20px;">
 
-A full-stack intelligent procurement platform that enables users to create, send, receive, and compare RFPs (Request for Proposals) using AI + automated email processing.
+  <h1>🌐 AI-Powered RFP Management System</h1>
 
-Built using React, Node.js, Express, MongoDB, LangChain, LangGraph, IMAP, Nodemailer, TailwindCSS.
+  <p>
+    A full-stack intelligent procurement platform that enables users to create, send, receive,
+    and compare RFPs (Request for Proposals) using AI and automated email processing.
+  </p>
 
-Install Step:
+  <p>
+    <strong>Tech Stack:</strong> React, Node.js, Express, MongoDB, LangChain, LangGraph, IMAP,
+    Nodemailer, TailwindCSS
+  </p>
 
- Frontend :Packages installed: React Vite TailwindCSS React Router Icons
+  <hr />
 
-  Backend: Includes:
-npm i express dotenv cors mongodb @langchain @langchain/langgraph nodemailer mailparser @langchain/cors imap
+  <h2>⚙️ Installation Steps</h2>
 
-Required Installations:
-- Node.js (v18+)
-- Git
-- MongoDB (Local or Atlas)
-- Gmail account (with App Password)
-- Enable IMAP in Gmail
-- Google GenAI API Key
+  <h3>Frontend</h3>
+  <p>Packages installed:</p>
+  <ul>
+    <li>React</li>
+    <li>Vite</li>
+    <li>TailwindCSS</li>
+    <li>React Router</li>
+    <li>Icons</li>
+  </ul>
 
-🔥 Key Features
-✅ 1. AI-Powered RFP Creation
+  <h3>Backend</h3>
+  <p>Includes:</p>
+  <pre style="background: #eee; padding: 10px;">
+npm install express dotenv cors mongodb @langchain/core 
+@langchain/langgraph nodemailer mailparser imap
+  </pre>
 
-Convert natural language input into structured RFP JSON using LangChain & GenAI.
+  <h2>🛠️ Required Installations</h2>
+  <ul>
+    <li>Node.js (v18+)</li>
+    <li>Git</li>
+    <li>MongoDB (Local or Atlas)</li>
+    <li>Gmail account with App Password</li>
+    <li>IMAP enabled in Gmail</li>
+    <li>Google GenAI API Key</li>
+  </ul>
 
-✅ 2. Vendor Management
+  <h2>🔥 Key Features</h2>
+  <ul>
+    <li><strong>AI-Powered RFP Creation:</strong> Converts natural language into structured RFP JSON.</li>
+    <li><strong>Vendor Management:</strong> Add and manage vendors.</li>
+    <li><strong>Automated Email Sending:</strong> Sends RFP emails with unique tracking IDs.</li>
+    <li><strong>Email Receiving:</strong> Reads vendor replies via IMAP + Cron.</li>
+    <li><strong>AI-Based Proposal Parsing:</strong> Extracts pricing and terms from emails.</li>
+    <li><strong>Proposal Comparison Dashboard:</strong> Side-by-side vendor comparison.</li>
+    <li><strong>AI Recommendation Engine:</strong> Suggests best vendor.</li>
+  </ul>
 
-Add/edit vendors and choose vendors for an RFP.
-
-✅ 3. Automated Email Sending (Nodemailer)
-
-RFP emails are sent with unique IDs to track replies.
-
-✅ 4. Email Receiving (IMAP + Cron Job)
-
-Backend continuously checks inbox and fetches new vendor replies.
-
-✅ 5. AI-Based Proposal Parsing
-
-Extracts pricing, delivery, warranty, payment terms, etc. from messy vendor emails.
-
-✅ 6. Proposal Comparison Dashboard
-
-Side-by-side comparison of vendor proposals.
-
-✅ 7. AI Recommendation Engine
-
-Suggests the best vendor based on cost, delivery, warranty, and completeness.
-
-🧠 End-to-End System Workflow
-
+  <h2>🧠 End-to-End Workflow</h2>
+  <pre style="background: #eee; padding: 10px;">
 User
   |
   v
@@ -81,66 +93,63 @@ AI Recommendation
   |
   v
 Final Vendor Selection by User
+  </pre>
 
-
-🏛️ System Architecture
-User → Frontend (React + Tailwind) 
+  <h2>🏛️ System Architecture</h2>
+  <pre style="background: #eee; padding: 10px;">
+User → Frontend (React + Tailwind)
      → Backend (Node.js + Express)
      → Database (MongoDB)
      → Email Send (Nodemailer SMTP)
-     → Email Receive (IMAP listener + Cron)
+     → Email Receive (IMAP Listener + Cron)
      → AI Parsing (LangChain + LangGraph + Google GenAI)
+  </pre>
 
+  <h2>📦 Clone the Repository</h2>
+  <pre style="background: #eee; padding: 10px;">
+git clone https://github.com/AshharRaza/AI-powered-RFP-Management-System/
+  </pre>
 
-✔️ 1. Clone the Repository
-git clone <https://github.com/AshharRaza/AI-powered-RFP-Management-System/>
+  <h2>💡 Decisions & Assumptions</h2>
+  <ul>
+    <li>Email-based vendor communication</li>
+    <li>RFP ID included in subject for reply tracking</li>
+    <li>Cron job used for polling inbox</li>
+    <li>Single-user system (as per assignment)</li>
+    <li>Vendor reply formats handled using AI</li>
+  </ul>
 
-💡 Decisions & Assumptions
+  <h2>🔮 Future Improvements</h2>
+  <ul>
+    <li>Multi-user authentication</li>
+    <li>Role-based access control</li>
+    <li>Real-time webhook-based email receiving</li>
+    <li>Advanced OCR for scanned PDFs</li>
+    <li>Vendor scoring engine</li>
+    <li>Export proposals to PDF</li>
+  </ul>
 
-Email-based vendor communication
+  <h2>🚀 Conclusion</h2>
+  <p>
+    This project demonstrates a complete, production-style AI-powered RFP management system.
+    It showcases real-world problem solving using modern full-stack technologies, AI workflows,
+    and automated email handling.
+  </p>
 
-RFP-ID included in the subject for reply identification
+  <p>Focus areas:</p>
+  <ul>
+    <li>Clean architecture</li>
+    <li>Scalable API design</li>
+    <li>Thoughtful AI integration</li>
+    <li>User-centric interface</li>
+    <li>Real-world automation patterns</li>
+  </ul>
 
-Cron job used for polling inbox
+  <h2>📌 Author</h2>
+  <p>
+    <strong>Ashhar Siddiqui</strong><br />
+    Full Stack Developer | AI Enthusiast
+  </p>
 
-Single-user system (as per assignment)
-
-Vendor reply formats vary, handled via AI
-
-🔮 Future Improvements
-
-Multi-user authentication
-
-Role-based access control
-
-Real-time Webhook-based email receiving
-
-Advanced OCR for scanned PDFs
-
-Vendor scoring engine
-
-Export proposal to PDF
-
-🚀 Conclusion
-
-This project demonstrates a complete, production-style implementation of an AI-powered RFP management system.
-It showcases real-world problem solving using modern full-stack technologies, AI workflows, and automated email handling.
-
-Through this project, I focused on:
-
-Clean architecture
-
-Scalable API design
-
-Thoughtful AI integration
-
-User-centric interface
-
-Real-world automation patterns
-
-This system can be extended further to support multi-user environments, real-time notifications, and enterprise-level features.
-
-📌 Author
-
-Ashhar Siddiqui
-Full Stack Developer | AI Enthusiast
+</body>
+</html>
