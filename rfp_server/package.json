@@ -1,0 +1,32 @@
+{
+  "name": "rfp_server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env --watch index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@langchain/core": "^1.1.1",
+    "@langchain/google-genai": "^2.0.1",
+    "@langchain/langgraph": "^1.0.2",
+    "canvas": "^3.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "imap-simple": "^5.1.0",
+    "mailparser": "^3.9.0",
+    "mongodb": "^7.0.0",
+    "mongoose": "^9.0.0",
+    "node-cron": "^4.2.1",
+    "nodemailer": "^7.0.11",
+    "pdf-lib": "^1.17.1",
+    "pdf2json": "^4.0.0",
+    "pdfjs-dist": "^5.4.449",
+    "pg": "^8.16.3",
+    "zod": "^4.1.13"
+  }
+}
